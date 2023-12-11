@@ -1,16 +1,13 @@
 # fgocompanion
 
-A new Flutter project.
+This project is meant only for non-commercial use as it uses intellectual properties of the Fate/Grand Order mobile game.
 
-## Getting Started
+## What is it?
 
-This project is a starting point for a Flutter application.
+This app aims to be a mobile companion featuring information about all servants currently available in the EN and JP versions of the game. One can acces the ascension arts, the skills and passives of a servant and can see them similariliy to the Gamepress site layout.
 
-A few resources to get you started if this is your first Flutter project:
+In order to get all the informations, the app uses the Atlas Academy API.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Feel free to install and send feedback
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## This is my first serious project and considering I am a student, I will try to maintain the app as good as I can considering my schedule.
