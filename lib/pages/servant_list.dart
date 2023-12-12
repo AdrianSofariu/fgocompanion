@@ -1,0 +1,130 @@
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+class ServantList extends StatefulWidget {
+  const ServantList({super.key});
+
+  @override
+  State<ServantList> createState() => _ServantListState();
+}
+
+class _ServantListState extends State<ServantList> {
+  List<dynamic> servantList = [];
+
+  //Add a controller for the search bar
+  final TextEditingController filter = TextEditingController();
+
+  //Add a variable for the filtered list
+  List<dynamic> filteredServantList = [];
+
+  @override
+  void initState() {
+    super.initState();
+    fetchServantData();
+    filteredServantList = servantList;
+    filter.addListener(searchListener);
+  }
+
+  /// Fetches servant data from the Atlas Academy API.
+  ///
+  /// This function sends a GET request to the Atlas Academy API and retrieves
+  /// a list of servants. If the request is successful (HTTP status code 200),
+  /// it decodes the JSON response and updates the `servantList` state.
+  /// If the request fails, it throws an exception.
+  Future<void> fetchServantData() async {
+    final response = await http.get(Uri.parse(
+        'https://api.atlasacademy.io/export/JP/basic_servant_lang_en.json'));
+    if (response.statusCode == 200) {
+      setState(() {
+        servantList = json.decode(utf8.decode(response.bodyBytes));
+      });
+    } else {
+      throw Exception('Failed to fetch servant data');
+    }
+  }
+
+  /// Updates the filtered servant list based on the search text.
+  ///
+  /// This function is called whenever the text in the search bar changes.
+  /// If the search bar is empty, it sets `filteredServantList` to the original `servantList`.
+  /// If the search bar is not empty, it filters `servantList` to include only the servants
+  /// whose names contain the search text (case-insensitive), and sets this filtered list to `filteredServantList`.
+  void searchListener() {
+    if (filter.text.isEmpty) {
+      setState(() {
+        filteredServantList = servantList;
+      });
+    } else {
+      setState(() {
+        filteredServantList = servantList
+            .where((servant) => servant['name']
+                .toLowerCase()
+                .contains(filter.text.toLowerCase()))
+            .toList();
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Servants'),
+        backgroundColor: Colors.blue,
+      ),
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 5.0),
+        color: const Color(0xFF2a3439),
+        // B
+        child: Column(
+          children: [
+            TextField(
+              controller: filter,
+              decoration: const InputDecoration(
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+                hintText: 'Search...',
+                hintStyle: TextStyle(color: Color(0xFFFFFFFF)),
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: filteredServantList.length,
+                itemBuilder: (context, index) {
+                  final servant = filteredServantList[index];
+                  return GestureDetector(
+                    onTap: () {
+                      // Handle servant card click
+                    },
+                    child: Card(
+                      elevation: 5.0,
+                      margin: const EdgeInsets.symmetric(vertical: 8.0),
+                      color: const Color(0xFF87CEFA),
+                      child: ListTile(
+                        leading: ClipRRect(
+                          borderRadius: BorderRadius.circular(8.0),
+                          child: Image.network(servant['face']),
+                        ),
+                        title: Text(
+                          servant['name'],
+                          style: const TextStyle(color: Color(0xFF000000)),
+                        ),
+                        subtitle: Text(
+                          'Collection No: ${servant['collectionNo']}',
+                          style: const TextStyle(color: Color(0xFFFFFFFF)),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}

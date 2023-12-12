@@ -1,4 +1,5 @@
 import 'package:fgocompanion/components/mybutton.dart';
+import 'package:fgocompanion/pages/servant_list.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -58,10 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (BuildContext context) {
-                              //TODO Create Servant List Page
-                              return const Text('Hello World');
-                            },
+                            builder: (context) => const ServantList(),
                           ),
                         );
                       },

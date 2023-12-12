@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           // This is the theme of the application.
           primarySwatch: Colors.blue,
-          fontFamily: 'Ubuntu'),
+          fontFamily: 'TitilliumWeb'),
       home: const MyHomePage(title: 'HomePage'),
     );
   }
