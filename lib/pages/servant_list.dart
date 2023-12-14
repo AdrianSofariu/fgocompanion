@@ -1,3 +1,4 @@
+import 'package:fgocompanion/pages/servant_details.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -22,7 +23,6 @@ class _ServantListState extends State<ServantList> {
   void initState() {
     super.initState();
     fetchServantData();
-    filteredServantList = servantList;
     filter.addListener(searchListener);
   }
 
@@ -38,6 +38,7 @@ class _ServantListState extends State<ServantList> {
     if (response.statusCode == 200) {
       setState(() {
         servantList = json.decode(utf8.decode(response.bodyBytes));
+        filteredServantList = servantList;
       });
     } else {
       throw Exception('Failed to fetch servant data');
@@ -91,36 +92,49 @@ class _ServantListState extends State<ServantList> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: filteredServantList.length,
-                itemBuilder: (context, index) {
-                  final servant = filteredServantList[index];
-                  return GestureDetector(
-                    onTap: () {
-                      // Handle servant card click
-                    },
-                    child: Card(
-                      elevation: 5.0,
-                      margin: const EdgeInsets.symmetric(vertical: 8.0),
-                      color: const Color(0xFF87CEFA),
-                      child: ListTile(
-                        leading: ClipRRect(
-                          borderRadius: BorderRadius.circular(8.0),
-                          child: Image.network(servant['face']),
-                        ),
-                        title: Text(
-                          servant['name'],
-                          style: const TextStyle(color: Color(0xFF000000)),
-                        ),
-                        subtitle: Text(
-                          'Collection No: ${servant['collectionNo']}',
-                          style: const TextStyle(color: Color(0xFFFFFFFF)),
-                        ),
+              child: filteredServantList.isEmpty
+                  ? const Center(
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
                       ),
+                    )
+                  : ListView.builder(
+                      itemCount: filteredServantList.length,
+                      itemBuilder: (context, index) {
+                        final servant = filteredServantList[index];
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => ServantDetails(
+                                    servantId: servant['collectionNo']),
+                              ),
+                            );
+                          },
+                          child: Card(
+                            elevation: 5.0,
+                            margin: const EdgeInsets.symmetric(vertical: 8.0),
+                            color: const Color(0xFF87CEFA),
+                            child: ListTile(
+                              leading: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.0),
+                                child: Image.network(servant['face']),
+                              ),
+                              title: Text(
+                                servant['name'],
+                                style:
+                                    const TextStyle(color: Color(0xFF000000)),
+                              ),
+                              subtitle: Text(
+                                'Collection No: ${servant['collectionNo']}',
+                                style:
+                                    const TextStyle(color: Color(0xFFFFFFFF)),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-              ),
             )
           ],
         ),
