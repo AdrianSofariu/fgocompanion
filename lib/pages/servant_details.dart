@@ -49,8 +49,7 @@ class _ServantDetailsState extends State<ServantDetails> {
         servant = json.decode(utf8.decode(response.bodyBytes));
         precacheServantImages();
         getCardCounts();
-        traitString =
-            servant['traits'].map((trait) => trait['name']).join(', ');
+        onCarouselPageChanged(0, CarouselPageChangedReason.controller);
       });
     } else {
       throw Exception('Failed to fetch servant data');
@@ -126,8 +125,23 @@ class _ServantDetailsState extends State<ServantDetails> {
         if (traits.isEmpty) {
           traits = servant['traits'];
         }
-      } else {
-        traits = servant['traits'];
+      } else if (index <= 3) {
+        if (index == 0) {
+          activeImageKey = "0";
+        } else {
+          activeImageKey = servant['extraAssets']['charaGraph']['ascension']
+              .keys
+              .elementAt(index);
+        }
+        if (servant['ascensionAdd']['individuality']['ascension']
+                [activeImageKey] !=
+            null) {
+          traits = servant['ascensionAdd']['individuality']['ascension']
+              [activeImageKey];
+        }
+        if (traits.isEmpty) {
+          traits = servant['traits'];
+        }
       }
 
       // Concatenate the trait names into a single string
