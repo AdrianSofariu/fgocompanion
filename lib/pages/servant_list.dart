@@ -81,6 +81,7 @@ class _ServantListState extends State<ServantList> {
         child: Column(
           children: [
             TextField(
+              style: const TextStyle(color: Colors.white),
               controller: filter,
               decoration: const InputDecoration(
                 prefixIcon: Icon(

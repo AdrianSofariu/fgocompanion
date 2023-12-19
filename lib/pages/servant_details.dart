@@ -330,6 +330,7 @@ class _ServantDetailsState extends State<ServantDetails> {
                           ]),
                         ],
                       ),
+                      const SizedBox(height: 20),
                       ...List<Map<String, dynamic>>.from(servant['skills'])
                           .map((skill) => SkillComponent(skill: skill))
                           .toList(),

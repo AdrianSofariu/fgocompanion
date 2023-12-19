@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.1.2
   carousel_slider: ^4.2.1
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -94,3 +95,21 @@ flutter:
    - family: TitilliumWeb
      fonts:
        - asset: assets/fonts/TitilliumWeb-Regular.ttf
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/FGOcompanion.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/icons/FGOcompanion.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/icons/FGOcompanion.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/FGOcompanion.png"
