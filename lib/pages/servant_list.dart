@@ -1,3 +1,4 @@
+// This file contains the ServantList widget, which displays a list of all servants in the game.
 import 'package:fgocompanion/pages/servant_details.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -12,6 +13,23 @@ class ServantList extends StatefulWidget {
 
 class _ServantListState extends State<ServantList> {
   List<dynamic> servantList = [];
+  Map<String, bool> classMap = {
+    'Saber': true,
+    'Archer': true,
+    'Lancer': true,
+    'Rider': true,
+    'Caster': true,
+    'Assassin': true,
+    'Berserker': true,
+    'Ruler': true,
+    'Avenger': true,
+    'Alter Ego': true,
+    'Moon Cancer': true,
+    'Foreigner': true,
+    'Shielder': true,
+    'Pretender': true,
+    'Beast': true,
+  };
 
   //Add a controller for the search bar
   final TextEditingController filter = TextEditingController();
@@ -67,6 +85,8 @@ class _ServantListState extends State<ServantList> {
     }
   }
 
+  void selectClass(String className) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +100,7 @@ class _ServantListState extends State<ServantList> {
         // B
         child: Column(
           children: [
+            //search textfield
             TextField(
               style: const TextStyle(color: Colors.white),
               controller: filter,
@@ -92,6 +113,8 @@ class _ServantListState extends State<ServantList> {
                 hintStyle: TextStyle(color: Color(0xFFFFFFFF)),
               ),
             ),
+            //filter by class using ToggleButtons
+            //page content
             Expanded(
               child: filteredServantList.isEmpty
                   ? const Center(

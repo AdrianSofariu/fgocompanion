@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
+//widget used to display an individual skill of a servant
 class SkillComponent extends StatelessWidget {
   final Map<String, dynamic> skill;
 
-  const SkillComponent({Key? key, required this.skill}) : super(key: key);
+  const SkillComponent({super.key, required this.skill});
 
   @override
   Widget build(BuildContext context) {

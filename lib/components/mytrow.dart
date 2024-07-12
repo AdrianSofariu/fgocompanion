@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// item used to display all the servants in the list
 class MyTrow extends StatelessWidget {
   final String description;
   final String value;

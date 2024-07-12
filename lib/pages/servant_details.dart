@@ -11,7 +11,7 @@ class ServantDetails extends StatefulWidget {
   // this is the servant id which is used in the API call
   final int servantId;
 
-  const ServantDetails({Key? key, required this.servantId}) : super(key: key);
+  const ServantDetails({super.key, required this.servantId});
 
   @override
   State<ServantDetails> createState() => _ServantDetailsState();
@@ -346,8 +346,7 @@ class _ServantDetailsState extends State<ServantDetails> {
                       ),
                       const SizedBox(height: 20),
                       ...List<Map<String, dynamic>>.from(servant['skills'])
-                          .map((skill) => SkillComponent(skill: skill))
-                          .toList(),
+                          .map((skill) => SkillComponent(skill: skill)),
                     ],
                   ),
                 )),

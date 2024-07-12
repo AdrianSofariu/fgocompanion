@@ -16,9 +16,9 @@ class MyButton extends StatelessWidget {
       onPressed: onTap,
       onHover: (val) {},
       style: ButtonStyle(
-        padding: MaterialStateProperty.all(const EdgeInsets.all(25)),
-        backgroundColor: MaterialStateProperty.all(Colors.blue),
-        shape: MaterialStateProperty.all(RoundedRectangleBorder(
+        padding: WidgetStateProperty.all(const EdgeInsets.all(25)),
+        backgroundColor: WidgetStateProperty.all(Colors.blue),
+        shape: WidgetStateProperty.all(RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         )),
       ),
