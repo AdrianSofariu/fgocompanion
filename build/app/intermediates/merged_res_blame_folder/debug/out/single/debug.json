@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxhdpi_main_icon_foreground.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxhdpi/main_icon_foreground.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-anydpi-v26_main_icon_round.xml.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-anydpi-v26/main_icon_round.xml"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxxhdpi_main_icon_round.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxxhdpi/main_icon_round.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxhdpi_main_icon_round.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxhdpi/main_icon_round.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxhdpi_launcher_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xhdpi_main_icon_foreground.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xhdpi/main_icon_foreground.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-mdpi_main_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-mdpi/main_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxxhdpi_main_icon_foreground.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxxhdpi/main_icon_foreground.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxhdpi_main_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxhdpi/main_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-mdpi_launcher_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-mdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-hdpi_main_icon_foreground.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-hdpi/main_icon_foreground.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-mdpi_main_icon_foreground.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-mdpi/main_icon_foreground.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xhdpi_main_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xhdpi/main_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-hdpi_launcher_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-hdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xhdpi_main_icon_round.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xhdpi/main_icon_round.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/drawable-v21_launch_background.xml.flat",
+        "source": "com.example.fgocompanion.app-main-1:/drawable-v21/launch_background.xml"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xhdpi_launcher_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-hdpi_main_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-hdpi/main_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-mdpi_main_icon_round.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-mdpi/main_icon_round.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxxhdpi_main_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxxhdpi/main_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-anydpi-v26_main_icon.xml.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-anydpi-v26/main_icon.xml"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/drawable_main_icon_background.xml.flat",
+        "source": "com.example.fgocompanion.app-main-1:/drawable/main_icon_background.xml"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-xxxhdpi_launcher_icon.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-xxxhdpi/launcher_icon.png"
+    },
+    {
+        "merged": "com.example.fgocompanion.app-merged_res-7:/mipmap-hdpi_main_icon_round.png.flat",
+        "source": "com.example.fgocompanion.app-main-1:/mipmap-hdpi/main_icon_round.png"
+    }
+]

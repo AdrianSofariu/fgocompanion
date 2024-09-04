@@ -1,0 +1,11 @@
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/icudtl.dat
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/flutter_windows.dll
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/assets/fonts/TitilliumWeb-Regular.ttf
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/MyProjects/repos/fgocompanion/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
