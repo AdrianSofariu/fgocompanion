@@ -11,4 +11,4 @@ In order to get all the informations, the app uses the Atlas Academy API.
 ## Feel free to install and send feedback
 [click here to download](build/app/outputs/flutter-apk/app-release.apk)
 
-## This is my first serious project and considering I am a student, I will try to maintain the app as good as I can considering my schedule.
+## > This is my first serious project and considering I am a student, I will try to maintain the app as good as I can considering my schedule.
