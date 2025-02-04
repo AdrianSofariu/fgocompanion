@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   http: ^1.1.2
+  #Fixed version of carousel_slider
   carousel_slider: ^5.0.0
   flutter_launcher_icons: ^0.14.3
 
