@@ -43,7 +43,8 @@ class _ServantDetailsState extends State<ServantDetails> {
   /// This method is asynchronous and returns a `Future<void>`.
   Future<void> fetchServantData() async {
     final response = await http.get(Uri.parse(
-        'https://api.atlasacademy.io/nice/JP/servant/${widget.servantId}?lang=en'));
+      'https://api.atlasacademy.io/nice/NA/servant/${widget.servantId}?lore=false'
+        /*'https://api.atlasacademy.io/nice/JP/servant/${widget.servantId}?lang=en'*/));
     if (response.statusCode == 200) {
       setState(() {
         servant = json.decode(utf8.decode(response.bodyBytes));

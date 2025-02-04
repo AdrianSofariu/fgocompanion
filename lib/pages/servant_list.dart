@@ -52,7 +52,8 @@ class _ServantListState extends State<ServantList> {
   /// If the request fails, it throws an exception.
   Future<void> fetchServantData() async {
     final response = await http.get(Uri.parse(
-        'https://api.atlasacademy.io/export/JP/basic_servant_lang_en.json'));
+        'https://api.atlasacademy.io/export/NA/basic_servant.json'
+        /*'https://api.atlasacademy.io/export/JP/basic_servant_lang_en.json'*/));
     if (response.statusCode == 200) {
       setState(() {
         servantList = json.decode(utf8.decode(response.bodyBytes));

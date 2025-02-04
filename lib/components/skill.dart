@@ -26,42 +26,27 @@ class SkillComponent extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 16.0),
-            ...skill['functions'].map((function) {
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(function['funcPopupText'],
-                      style: const TextStyle(
-                          fontSize: 16.0, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 8.0),
-                  ...function['buffs']
-                      .where((buff) {
-                        return buff['funcTargetTeam'] == 'player' ||
-                            buff['funcTargetTeam'] == 'playerOrEnemy';
-                      })
-                      .map((buff) => Text(
-                          '${buff['name']} (${buff['svals'][0]['turns']} turns, ${buff['svals'][0]['count']} count)'))
-                      .toList(),
-                ],
-              );
-            }).toList(),
+            Text(skill['detail'],
+                style: const TextStyle(fontSize: 16.0),),
+            const SizedBox(height: 16.0),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: DataTable(
                 columnSpacing: 4,
                 columns: List<DataColumn>.generate(
-                    10, (index) => DataColumn(label: Text('Lvl ${index + 1}'))),
+                    11, (index) => index != 0 ? DataColumn(label: Text('Lvl $index')) : DataColumn(label: Text(''))),
                 rows: [
                   ...skill['functions'].map<DataRow>((function) {
                     return DataRow(
-                      cells: function['svals']
+                      cells: [DataCell(Text(function['funcPopupText']))] +
+                        function['svals']
                           .map<DataCell>((sval) =>
                               DataCell(Text(sval['Value'].toString())))
                           .toList(),
                     );
                   }).toList(),
                   DataRow(
-                    cells: skill['coolDown']
+                    cells: [DataCell(Text(""))] + skill['coolDown']
                         .map<DataCell>(
                             (cooldown) => DataCell(Text(cooldown.toString())))
                         .toList(),
