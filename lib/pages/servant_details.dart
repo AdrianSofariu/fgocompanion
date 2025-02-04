@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:fgocompanion/components/mytrow.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as carousel;
 
 import '../components/skill.dart';
 
@@ -49,7 +49,7 @@ class _ServantDetailsState extends State<ServantDetails> {
         servant = json.decode(utf8.decode(response.bodyBytes));
         precacheServantImages();
         getCardCounts();
-        onCarouselPageChanged(0, CarouselPageChangedReason.controller);
+        onCarouselPageChanged(0, carousel.CarouselPageChangedReason.controller);
       });
     } else {
       throw Exception('Failed to fetch servant data');
@@ -114,7 +114,7 @@ class _ServantDetailsState extends State<ServantDetails> {
   /// Finally, it concatenates the trait names into a single string `traitString`.
   ///
   /// This function does not return a value.
-  void onCarouselPageChanged(int index, CarouselPageChangedReason reason) {
+  void onCarouselPageChanged(int index, carousel.CarouselPageChangedReason reason) {
     setState(() {
       if (index > 3) {
         activeImageKey = servant['extraAssets']['charaGraph']['costume']
@@ -218,7 +218,7 @@ class _ServantDetailsState extends State<ServantDetails> {
                       ),
                       const SizedBox(height: 20),
                       // this is the ascenison arts carousel
-                      CarouselSlider(
+                      carousel.CarouselSlider(
                         items: [
                           // get all ascension arts
                           ...servant['extraAssets']['charaGraph']['ascension']
@@ -236,7 +236,7 @@ class _ServantDetailsState extends State<ServantDetails> {
                             fit: BoxFit.cover,
                           );
                         }).toList(),
-                        options: CarouselOptions(
+                        options: carousel.CarouselOptions(
                           height: 500,
                           enlargeCenterPage: true,
                           autoPlay: false,
